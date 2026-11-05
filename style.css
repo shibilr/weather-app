@@ -1,0 +1,247 @@
+/* Background Image */
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(15, 35, 60, 0.45),
+            rgba(15, 35, 60, 0.55)),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1920");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+}
+/* heading */
+.heading{
+    color: #eeeeee;
+}
+
+/* Main Container */
+.main-container {
+    width: 100%;
+    max-width: 680px;
+}
+
+/* Heading */
+.heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.heading p {
+    color: #eeeeee;
+    font-size: 14px;
+}
+
+/* Main Glass Card */
+.weather-container {
+    background: rgba(255, 255, 255, 0.17);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 13px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.search-box button {
+    background: #2879e8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #155dc0;
+    transform: scale(1.05);
+}
+
+/* Loading */
+#loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Error */
+#errorMessage {
+    display: none;
+    background: rgba(220, 53, 69, 0.9);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Weather Card */
+.current-weather {
+    background: rgba(35, 75, 115, 0.65);
+    border-radius: 17px;
+    padding: 22px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.current-weather:hover {
+    background: rgba(35, 75, 115, 0.85);
+    transform: translateY(-3px);
+}
+
+/* City and Date */
+.city-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.city-date h3 {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.city-date small {
+    font-size: 12px;
+}
+
+/* Temperature Section */
+.temperature-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 5px;
+}
+
+.weather-icon {
+    font-size: 65px;
+    color: #ffe4a3;
+}
+
+.temperature {
+    font-size: 52px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.weather-description {
+    text-transform: capitalize;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+/* Weather Details */
+.detail-card {
+    background: rgba(35, 75, 115, 0.65);
+    border-radius: 14px;
+    padding: 15px;
+    min-height: 120px;
+    transition: 0.3s;
+}
+
+.detail-card:hover {
+    background: rgba(35, 75, 115, 0.9);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.detail-icon {
+    font-size: 23px;
+    color: #ffd58a;
+    margin-bottom: 15px;
+}
+
+.detail-card p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #e1e1e1;
+}
+
+.detail-card h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Empty State */
+.welcome-message {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.welcome-message i {
+    font-size: 55px;
+    color: #ffe4a3;
+    margin-bottom: 15px;
+}
+
+.welcome-message h4 {
+    font-weight: bold;
+}
+
+.welcome-message p {
+    font-size: 14px;
+    color: #eeeeee;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #eeeeee;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media(max-width: 576px) {
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .weather-container {
+        padding: 15px;
+    }
+
+    .temperature {
+        font-size: 40px;
+    }
+
+    .weather-icon {
+        font-size: 50px;
+    }
+
+    .detail-card {
+        min-height: 110px;
+        padding: 12px;
+    }
+}
